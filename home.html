@@ -89,40 +89,6 @@
         </div>
       </footer>
     </div>
-    <!-- JavaScript for the server -->
-<script type="text/javascript">
-  $(".submit").on("click", function (event) {
-    event.preventDefault();
-
-    // Here we grab the form elements
-    var newReservation = {
-      customerName: $("#reserve-name").val().trim(),
-      phoneNumber: $("#reserve-phone").val().trim(),
-      customerEmail: $("#reserve-email").val().trim(),
-      customerID: $("#reserve-unique-id").val().trim(),
-    };
-
-    console.log(newReservation);
-
-    $.post("/api/table", newReservation, function (data) {
-      // Alert user of reservation
-      if (data) {
-        alert("Get ready for a spontaneous experience!");
-      }
-
-      // Tell user they're on the waiting list
-      else {
-        alert("You may have to wait a bit, but it will be worth it");
-      }
-
-      // Clear the form
-      $("#reserve-name").val("");
-      $("#reserve-phone").val("");
-      $("#reserve-email").val("");
-      $("#reserve-unique-id").val("");
-    });
-  });
-</script>
 © 2020 GitHub, Inc.
   </body>
 </html>
