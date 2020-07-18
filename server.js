@@ -37,13 +37,13 @@ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
   });
   
-  app.get("/pages/reservations", function(req, res) {
-    res.sendFile(path.join(__dirname, "reservations.html"));
+  app.get("/reservations", function(req, res) {
+    res.sendFile(path.join(__dirname, "/pages/reservations.html"));
   });
   
   // Displays all characters
-  app.get("/pages/views.html", function(req, res) {
-    res.sendFile(path.join(__dirname, "views.html"));
+  app.get("/views", function(req, res) {
+    res.sendFile(path.join(__dirname, "/pages/views.html"));
   });
 
 
