@@ -1,5 +1,4 @@
 
-<!-- This is the former code.  -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,10 +10,7 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/style.css" />
 
@@ -55,10 +51,14 @@
         </div>
       </nav>
       <!-- End navbar -->
+      <hr>
+      <hr> 
+      <hr>
+      <main>
     <div class="container">
       <div class="jumbotron">
         <h1 class="text-center">
-          </i></span> Spontaneous Food
+          </i></span> Spontaneous Restaurant
         </h1>
         <hr />
         <h2 class="text-center">
@@ -68,27 +68,35 @@
 
         <div class="text-center">
           <a href="/table"
-            ><button class="btn btn-lg btn-primary">
-              <span class="fa fa-list-alt"></span> View Tables
+            ><button class="btn">
+               See Who's Coming
             </button></a
           >
           <a href="/reserve"
-            ><button class="btn btn-lg btn-danger">
-              <span class="fa fa-credit-card"></span> Make Reservation
+            ><button class="btn">
+               Save Your Seat
             </button></a
           >
         </div>
       </div>
 
-      <footer class="footer">
+      <div>
         <div class="container">
           <p>
-            <a href="/api/table">API for Reservations</a> |
-            <a href="/api/waitlist">API for Wait List</a>
+            <a class=yellowlink href="/api/table">API for Reservations</a> |
+            <a class=yellowlink href="/api/waitlist">API for Wait List</a>
           </p>
         </div>
-      </footer>
+      </div>
     </div>
+  </main>
+        <!-- Begin footer -->
+        <div class="footer-copyright footer">
+          <div class="container">
+            A Spontaneous Production 2020
+          </div>
+        </div>
+        <!-- End footer -->
     <!-- JavaScript for the server -->
 <script type="text/javascript">
   $(".submit").on("click", function (event) {
@@ -123,6 +131,5 @@
     });
   });
 </script>
-© 2020 GitHub, Inc.
   </body>
 </html>
