@@ -58,8 +58,46 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/style.css" />
+
   </head>
   <body>
+        <!-- Begin navbar -->
+        <nav
+        style="background-color: #daa520; font-weight: bold;"
+        class="navbar navbar-expand-sm navbar-dark fixed-top"
+      >
+        <!-- Navbar heading -->
+        <a class="navbar-brand" href="/">Spontaneous Restaurant</a>
+  
+        <!-- This creates the collapsing menu icon -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Pushing the nav items to the left -->
+          <ul class="navbar-nav ml-auto">
+            <!-- Navbar links -->
+            <li class="nav-item">
+              <a class="nav-link" href="/reserve">Make a Reservation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/table">View Reservations</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- End navbar -->
     <div class="container">
       <div class="jumbotron">
         <h1 class="text-center">
@@ -67,17 +105,17 @@
         </h1>
         <hr />
         <h2 class="text-center">
-          We only have 5 tables! Be one of the cool kids!
+          Grab one of our 5 tables!
         </h2>
         <br />
 
         <div class="text-center">
-          <a href="/views"
+          <a href="/table"
             ><button class="btn btn-lg btn-primary">
               <span class="fa fa-list-alt"></span> View Tables
             </button></a
           >
-          <a href="/reservations"
+          <a href="/reserve"
             ><button class="btn btn-lg btn-danger">
               <span class="fa fa-credit-card"></span> Make Reservation
             </button></a
@@ -130,8 +168,8 @@
       <footer class="footer">
         <div class="container">
           <p>
-            <a href="/api/tables">API Table Link</a> |
-            <a href="/api/waitlist">API Wait List</a>
+            <a href="/api/table">API for Reservations</a> |
+            <a href="/api/waitlist">API for Wait List</a>
           </p>
 >>>>>>> master:home.html
         </div>

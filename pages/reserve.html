@@ -9,15 +9,52 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/style.css" />
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="href"
+      ="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
 
   <body>
+    <!-- Begin navbar -->
+    <nav
+      style="background-color: #daa520; font-weight: bold;"
+      class="navbar navbar-expand-sm navbar-dark fixed-top"
+    >
+      <!-- Navbar heading -->
+      <a class="navbar-brand" href="/">Spontaneous Restaurant</a>
+
+      <!-- This creates the collapsing menu icon -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Pushing the nav items to the left -->
+        <ul class="navbar-nav ml-auto">
+          <!-- Navbar links -->
+          <li class="nav-item">
+            <a class="nav-link" href="/reserve">Make a Reservation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/table">View Reservations</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End navbar -->
     <div class="container">
       <div class="jumbotron">
         <h1 class="text-center">
@@ -27,21 +64,24 @@
         <h2 class="text-center">Make your reservation</h2>
         <br />
         <div class="text-center">
-          <a href="/views">
+          <a href="/table">
             <button class="btn btn-lg btn-primary">
               <span class="fa fa-list-alt"></span> Booked Tables
             </button>
           </a>
+<<<<<<< HEAD
           <a href="./table.html">
             <button class="btn btn-lg btn-default">
               <span class="fa fa-home"></span>
             </button>
           </a>
+=======
+>>>>>>> 2ba406dc7149987b22473669b3d2e97c819d8f76
         </div>
       </div>
       <div class="row">
         <div class="col-lg-12">
-          <!-- Reservation Page -->
+          <!-- Reservation form -->
           <div class="card">
             <div class="card-header">
               Table Reservation
@@ -80,7 +120,7 @@
       <footer class="footer">
         <div class="container">
           <p>
-            <a href="/api/tables">API Table Link</a> |
+            <a href="/api/table">API Table Link</a> |
             <a href="/api/waitlist">API Wait List</a>
           </p>
         </div>
@@ -104,7 +144,7 @@
 
     console.log(newReservation);
 
-    $.post("/api/tables", newReservation, function (data) {
+    $.post("/api/table", newReservation, function (data) {
       // Alert user of reservation
       if (data) {
         alert("Get ready for a spontaneous experience!");
