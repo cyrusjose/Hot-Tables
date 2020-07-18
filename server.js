@@ -35,12 +35,6 @@ var reservations = [
     customerID: "4",
     customerName: "melinda",
     phoneNumber: "444-444-4444"
-  },
-  {
-    customerEmail: "josh@gmail.com",
-    customerID: "5",
-    customerName: "josh",
-    phoneNumber: "555-555-5555"
   }
 ];
 
