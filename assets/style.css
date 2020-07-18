@@ -1,5 +1,41 @@
+body {
+  background-color: #fbf6e8;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* For the sticky footer */
+main {
+  flex: 1 0 auto;
+}
+
 .jumbotron {
-  margin-top: 50px;
+  margin-top: 20px;
   background-color: goldenrod;
   color: white;
+}
+
+.card-header {
+  background-color: goldenrod;
+  color: white;
+}
+
+.yellowlink {
+  color: goldenrod;
+}
+
+.btn {
+  background-color: #a520da;
+  color: white;
+}
+
+/* Creates a sticky footer */
+.footer {
+  width: 100%;
+  background-color: goldenrod;
+  color: white;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  padding: 1.5rem 0rem;
 }
