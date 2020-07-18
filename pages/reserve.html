@@ -26,7 +26,7 @@
       class="navbar navbar-expand-sm navbar-dark fixed-top"
     >
       <!-- Navbar heading -->
-      <a class="navbar-brand" href="../home.html">Spontaneous Restaurant</a>
+      <a class="navbar-brand" href="/">Spontaneous Restaurant</a>
 
       <!-- This creates the collapsing menu icon -->
       <button
@@ -46,10 +46,10 @@
         <ul class="navbar-nav ml-auto">
           <!-- Navbar links -->
           <li class="nav-item">
-            <a class="nav-link" href="reserve.html">Make a Reservation</a>
+            <a class="nav-link" href="/reserve">Make a Reservation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="table.html">View Reservations</a>
+            <a class="nav-link" href="/table">View Reservations</a>
           </li>
         </ul>
       </div>
@@ -64,7 +64,7 @@
         <h2 class="text-center">Make your reservation</h2>
         <br />
         <div class="text-center">
-          <a href="table.html">
+          <a href="/table">
             <button class="btn btn-lg btn-primary">
               <span class="fa fa-list-alt"></span> Booked Tables
             </button>
@@ -112,7 +112,7 @@
       <footer class="footer">
         <div class="container">
           <p>
-            <a href="/api/tables">API Table Link</a> |
+            <a href="/api/table">API Table Link</a> |
             <a href="/api/waitlist">API Wait List</a>
           </p>
         </div>
@@ -136,7 +136,7 @@
 
     console.log(newReservation);
 
-    $.post("/api/tables", newReservation, function (data) {
+    $.post("/api/table", newReservation, function (data) {
       // Alert user of reservation
       if (data) {
         alert("Get ready for a spontaneous experience!");
