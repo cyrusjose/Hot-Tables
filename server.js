@@ -1,4 +1,3 @@
-
 var express = require("express");
 var path = require("path");
 
@@ -12,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //reservation array placeholders
-var characters = [
+var reservations = [
   {
     name: "cyrus",
     phone: "555-555-5555",
@@ -30,25 +29,21 @@ var characters = [
     phone: "333-333-3333",
     email: "kate@gmail.com",
     id: 3,
-  }
+  },
 ];
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
-  });
-  
-  app.get("/reservations", function(req, res) {
-    res.sendFile(path.join(__dirname, "/pages/reservations.html"));
-  });
-  
-  // Displays all characters
-  app.get("/views", function(req, res) {
-    res.sendFile(path.join(__dirname, "/pages/views.html"));
-  });
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "home.html"));
+});
 
+app.get("/table", function (req, res) {
+  res.sendFile(path.join(__dirname, "/pages/table.html"));
+});
 
+app.get("/reserve", function (req, res) {
+  res.sendFile(path.join(__dirname, "/pages/reserve.html"));
+});
 
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
-  
+app.listen(PORT, function () {
+  console.log("App listening on PORT " + PORT);
+});
