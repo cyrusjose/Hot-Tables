@@ -26,7 +26,7 @@
       class="navbar navbar-expand-sm navbar-dark fixed-top"
     >
       <!-- Navbar heading -->
-      <a class="navbar-brand" href="../home.html">Spontaneous Restaurant</a>
+      <a class="navbar-brand" href="/">Spontaneous Restaurant</a>
 
       <!-- This creates the collapsing menu icon -->
       <button
@@ -46,10 +46,10 @@
         <ul class="navbar-nav ml-auto">
           <!-- Navbar links -->
           <li class="nav-item">
-            <a class="nav-link" href="reserve.html">Make a Reservation</a>
+            <a class="nav-link" href="/reserve">Make a Reservation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="table.html">View Reservations</a>
+            <a class="nav-link" href="/table">View Reservations</a>
           </li>
         </ul>
       </div>
@@ -65,15 +65,11 @@
         <br />
 
         <div class="text-center">
-          <a href="reserve.html"
+          <a href="/reserve"
             ><button class="btn btn-lg btn-danger">
               <span class="fa fa-credit-card"></span> Make a Reservation
             </button></a
           >
-          <a href="/"
-            ><button class="btn btn-lg btn-default">
-              <span class="fa fa-home"></span></button
-          ></a>
         </div>
       </div>
 
@@ -121,7 +117,7 @@
 
     function runTableQuery() {
       // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
-      $.ajax({ url: "/api/tables", method: "GET" }).then(function (tableData) {
+      $.ajax({ url: "/api/table", method: "GET" }).then(function (tableData) {
         // Here we then log the tableData to console, where it will show up as an object.
         console.log(tableData);
         console.log("------------------------------------");
