@@ -9,3 +9,16 @@ var PORT = process.env.PORT || 3001;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "index.html"));
+  });
+  
+  app.get("/reservations", function(req, res) {
+    res.sendFile(path.join(__dirname, "reservations.html"));
+  });
+  
+  // Displays all characters
+  app.get("/api/characters", function(req, res) {
+    return res.json(characters);
+  });
