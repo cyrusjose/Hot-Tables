@@ -29,6 +29,18 @@ var reservations = [
     customerID: "3",
     customerName: "kate",
     phoneNumber: "333-333-3333"
+  },
+  {
+    customerEmail: "melinda@gmail.com",
+    customerID: "4",
+    customerName: "melinda",
+    phoneNumber: "444-444-4444"
+  },
+  {
+    customerEmail: "josh@gmail.com",
+    customerID: "5",
+    customerName: "josh",
+    phoneNumber: "555-555-5555"
   }
 ];
 
