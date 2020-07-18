@@ -87,7 +87,7 @@
             </button></a
           >
         </div>
-        <div class="row"> -->
+        <div class="row">
 
       <footer class="footer">
         <div class="container">
@@ -98,7 +98,7 @@
         </div>
       
         <script type="text/javascript">
-          // Question: What does this code do?
+          
           $("#add-btn").on("click", function(event) {
             event.preventDefault();
             var newCharacter = {
@@ -108,7 +108,7 @@
               forcePoints: $("#force-points").val().trim()
             };
       
-            // Question: What does this code do??
+            
             $.post("/api/characters", newCharacter)
               .then(function(data) {
                 console.log("add.html", data);
@@ -118,4 +118,4 @@
         </script>
       
       </body>
-      </html>  -->
+      </html>
