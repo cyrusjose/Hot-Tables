@@ -1,3 +1,4 @@
+
 var express = require("express");
 var path = require("path");
 
@@ -22,3 +23,10 @@ app.get("/", function(req, res) {
   app.get("/api/characters", function(req, res) {
     return res.json(characters);
   });
+
+
+
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+  
