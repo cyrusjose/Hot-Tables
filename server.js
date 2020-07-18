@@ -40,7 +40,7 @@ app.get("/reservations", function (req, res) {
   res.sendFile(path.join(__dirname, "/pages/reservations.html"));
 });
 
-app.get("/views", function (req, res) {
+app.get("/waitlist", function (req, res) {
   res.sendFile(path.join(__dirname, "/pages/views.html"));
 });
 
