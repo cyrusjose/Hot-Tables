@@ -58,6 +58,10 @@ app.post("/api/reserve", function(req, res){
 
 });
 
+app.get("/api/table", function(req, res) {
+  return res.json(reservations);
+});
+
 
 app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
