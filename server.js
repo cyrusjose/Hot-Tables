@@ -29,10 +29,28 @@ var reservations = [
     phoneNumber: "333-333-3333",
     customerEmail: "kate@gmail.com",
     customerID: 3,
-  },
+  }
 ];
 
-var waitlist = [{}];
+var waitlist = [{
+  customerName: "cyrus",
+  phoneNumber: "555-555-5555",
+  customerEmail: "cyrus@gmail.com",
+  customerID: 1,
+},
+{
+  customerName: "kevin",
+  phoneNumber: "222-222-2222",
+  customerEmail: "kevin@gmail.com",
+  customerID: 2,
+},
+{
+  customerName: "kate",
+  phoneNumber: "333-333-3333",
+  customerEmail: "kate@gmail.com",
+  customerID: 3,
+}
+];
 
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "home.html"));
@@ -60,6 +78,9 @@ app.post("/api/reserve", function(req, res){
 
 app.get("/api/table", function(req, res) {
   return res.json(reservations);
+});
+app.get("/api/waitlist", function(req, res) {
+  return res.json(waitlist);
 });
 
 
