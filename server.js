@@ -33,15 +33,15 @@ var reservations = [
 ];
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "home.html"));
 });
 
-app.get("/reservations", function (req, res) {
-  res.sendFile(path.join(__dirname, "/pages/reservations.html"));
+app.get("/table", function (req, res) {
+  res.sendFile(path.join(__dirname, "/pages/table.html"));
 });
 
-app.get("/waitlist", function (req, res) {
-  res.sendFile(path.join(__dirname, "/pages/views.html"));
+app.get("/reserve", function (req, res) {
+  res.sendFile(path.join(__dirname, "/pages/reserve.html"));
 });
 
 app.listen(PORT, function () {
