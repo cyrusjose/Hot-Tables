@@ -32,9 +32,7 @@ var reservations = [
   },
 ];
 
-var waitlist = [{
-
-}]
+var waitlist = [{}];
 
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "home.html"));
@@ -47,7 +45,6 @@ app.get("/table", function (req, res) {
 app.get("/reserve", function (req, res) {
   res.sendFile(path.join(__dirname, "/pages/reserve.html"));
 });
-
 
 app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
