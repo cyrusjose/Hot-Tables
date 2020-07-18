@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Reservation Page</title>
+    <title>Make a Reservation</title>
 
     <!-- Latest compiled and minified CSS & JS -->
     <link
@@ -21,7 +21,7 @@
     <div class="container">
       <div class="jumbotron">
         <h1 class="text-center">
-          <span class="fa fa-fire"></span> Hot Restaurant
+          Spontaneous Restaurant
         </h1>
         <hr />
         <h2 class="text-center">Make your reservation</h2>
@@ -29,7 +29,7 @@
         <div class="text-center">
           <a href="/views">
             <button class="btn btn-lg btn-primary">
-              <span class="fa fa-list-alt"></span> View Tables
+              <span class="fa fa-list-alt"></span> Booked Tables
             </button>
           </a>
           <a href="/">
@@ -89,13 +89,8 @@
   </body>
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<!-- JavaScript for the server -->
 <script type="text/javascript">
-  // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
-  // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
-  // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
-  // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
-
   $(".submit").on("click", function (event) {
     event.preventDefault();
 
@@ -109,23 +104,18 @@
 
     console.log(newReservation);
 
-    // This line is the magic. It"s very similar to the standard ajax function we used.
-    // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-    // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-    // depending on if a tables is available or not.
-
     $.post("/api/tables", newReservation, function (data) {
-      // If a table is available... tell user they are booked.
+      // Alert user of reservation
       if (data) {
-        alert("Yay! You are officially booked!");
+        alert("Get ready for a spontaneous experience!");
       }
 
-      // If a table is available... tell user they on the waiting list.
+      // Tell user they're on the waiting list
       else {
-        alert("Sorry you are on the wait list");
+        alert("You may have to wait a bit, but it will be worth it");
       }
 
-      // Clear the form when submitting
+      // Clear the form
       $("#reserve-name").val("");
       $("#reserve-phone").val("");
       $("#reserve-email").val("");
