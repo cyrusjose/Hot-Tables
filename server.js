@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //reservation array placeholders
-var characters = [
+var reservations = [
   {
     name: "cyrus",
     phone: "555-555-5555",
