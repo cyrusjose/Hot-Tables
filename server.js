@@ -15,13 +15,13 @@ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
   });
   
-  app.get("/reservations", function(req, res) {
+  app.get("/pages/reservations", function(req, res) {
     res.sendFile(path.join(__dirname, "reservations.html"));
   });
   
   // Displays all characters
-  app.get("/api/characters", function(req, res) {
-    return res.json(characters);
+  app.get("/pages/views.html", function(req, res) {
+    res.sendFile(path.join(__dirname, "views.html"));
   });
 
 
