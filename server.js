@@ -20,8 +20,8 @@ app.get("/", function(req, res) {
   });
   
   // Displays all characters
-  app.get("/api/characters", function(req, res) {
-    return res.json(characters);
+  app.get("/views.html", function(req, res) {
+    res.sendFile(path.join(__dirname, "views.html"));
   });
 
 
