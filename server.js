@@ -13,23 +13,23 @@ app.use(express.json());
 //reservation array placeholders
 var reservations = [
   {
-    name: "cyrus",
-    phone: "555-555-5555",
-    email: "cyrus@gmail.com",
-    id: 1,
+    customerEmail: "cyrus@gmail.com", 
+    customerID: "1",
+    customerName: "cyrus",
+    phoneNumber: "555-555-5555"
   },
   {
-    name: "kevin",
-    phone: "222-222-2222",
-    email: "kevin@gmail.com",
-    id: 2,
+    customerEmail: "kevin@gmail.com",
+    customerID: "2",
+    customerName: "kevin",
+    phoneNumber: "222-222-2222"
   },
   {
-    name: "kate",
-    phone: "333-333-3333",
-    email: "kate@gmail.com",
-    id: 3,
-  },
+    customerEmail: "kate@gmail.com",
+    customerID: "3",
+    customerName: "kate",
+    phoneNumber: "333-333-3333"
+  }
 ];
 
 app.get("/", function (req, res) {
@@ -53,7 +53,12 @@ app.post("/api/reserve", function(req, res){
   console.log(newReserve);
   reservations.push(newReserve);
   res.json(newReserve);
+  console.log(reservations);
 
+});
+
+app.get("/api/table", function(req, res) {
+  return res.json(reservations);
 });
 
 
