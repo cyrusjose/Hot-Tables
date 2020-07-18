@@ -16,12 +16,12 @@ app.get("/", function(req, res) {
   });
   
   app.get("/reservations", function(req, res) {
-    res.sendFile(path.join(__dirname, "reservations.html"));
+    res.sendFile(path.join(__dirname, "/pages/reservations.html"));
   });
   
   // Displays all characters
   app.get("/views.html", function(req, res) {
-    res.sendFile(path.join(__dirname, "views.html"));
+    res.sendFile(path.join(__dirname, "/pages/views.html"));
   });
 
 
