@@ -1,5 +1,5 @@
 body {
-  background-color: #fbf6e8;
+  background-color: #EDF7F6;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -10,31 +10,43 @@ main {
   flex: 1 0 auto;
 }
 
+.navbar{
+  /* background-color: #51e2f5; */
+  background-color: #eebd6b;
+  font-weight: bold;
+}
+
 .jumbotron {
   margin-top: 20px;
-  background-color: goldenrod;
-  color: white;
+  background-color:#447695;
+  color: #EDF7F6;
 }
 
 .card-header {
-  background-color: goldenrod;
-  color: white;
+  /* background-color: #51e2f5; */
+  background-color: #eebd6b;
+  color: #EDF7F6;
 }
 
 .yellowlink {
-  color: goldenrod;
+  color: blue;
 }
 
 .btn {
-  background-color: #a520da;
-  color: white;
+  background-color: #bfe6ef;
+  color: black;
+  opacity: 0.5;
+}
+
+.btn:hover{
+  opacity: 1;
 }
 
 /* Creates a sticky footer */
 .footer {
   width: 100%;
-  background-color: goldenrod;
-  color: white;
+  background-color: #eebd6b;
+  color: #EDF7F6;
   text-align: center;
   font-family: "Dancing Script", cursive;
   padding: 1.5rem 0rem;
