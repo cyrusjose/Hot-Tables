@@ -34,8 +34,8 @@ This project was created by Cyrus Jose, Melinda Winter, Kate An, Kevin Cabe, and
 
 You can find the contributors on GitHub:
 
-- [Github Profile](https://github.com/cyrusjose)
-- [Github Profile](https://github.com/melindawinter)
-- [Github Profile](https://github.com/katean004)
-- [Github Profile](https://github.com/Joshemon)
-- [Github Profile](https://github.com/softwaresCabe)
+- [Cyrus Jose](https://github.com/cyrusjose)
+- [Melinda Winter](https://github.com/melindawinter)
+- [Kate An](https://github.com/katean004)
+- [Joshuah Montero](https://github.com/Joshemon)
+- [Kevin Cabe](https://github.com/softwaresCabe)
