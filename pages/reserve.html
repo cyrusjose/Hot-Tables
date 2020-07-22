@@ -150,7 +150,7 @@
 
     console.log(newReservation);
 
-    $.post("/api/table", newReservation, function (data) {
+    $.post("/api/reserve", newReservation, function (data) {
       // Alert user of reservation
       if (data) {
         alert("Get ready for a spontaneous experience!");
