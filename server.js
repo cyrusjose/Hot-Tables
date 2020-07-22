@@ -13,24 +13,36 @@ app.use(express.static(__dirname + "/assets/"));
 
 //reservation array placeholders
 var reservations = [
-  // {
-  //   customerName: "cyrus",
-  //   phoneNumber: "555-555-5555",
-  //   customerEmail: "cyrus@gmail.com",
-  //   customerID: 1,
-  // },
-  // {
-  //   customerName: "kevin",
-  //   phoneNumber: "222-222-2222",
-  //   customerEmail: "kevin@gmail.com",
-  //   customerID: 2,
-  // },
-  // {
-  //   customerName: "kate",
-  //   phoneNumber: "333-333-3333",
-  //   customerEmail: "kate@gmail.com",
-  //   customerID: 3,
-  // },
+  {
+    customerName: "cyrus",
+    phoneNumber: "555-555-5555",
+    customerEmail: "cyrus@gmail.com",
+    customerID: 1,
+  },
+  {
+    customerName: "kevin",
+    phoneNumber: "222-222-2222",
+    customerEmail: "kevin@gmail.com",
+    customerID: 2,
+  },
+  {
+    customerName: "kate",
+    phoneNumber: "333-333-3333",
+    customerEmail: "kate@gmail.com",
+    customerID: 3,
+  },
+  {
+    customerName: "kate",
+    phoneNumber: "333-333-3333",
+    customerEmail: "kate@gmail.com",
+    customerID: 3,
+  },
+  {
+    customerName: "kate",
+    phoneNumber: "333-333-3333",
+    customerEmail: "kate@gmail.com",
+    customerID: 3,
+  }
 ];
 
 var waitlist = [
@@ -68,7 +80,7 @@ app.get("/reserve", function (req, res) {
 });
 
 //create new reservations, takes in JSON input
-app.post("/api/reserve", function (req, res) {
+var tablesReserved = app.post("/api/reserve", function (req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body parsing middleware
   var newReserve = req.body;
@@ -78,6 +90,18 @@ app.post("/api/reserve", function (req, res) {
   res.json(newReserve);
 });
 
+  app.post("/api/waitlist", function (req, res) {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body parsing middleware
+    var newWait = req.body;
+  
+    console.log(newWait);
+    waitlist.push(newWait);
+    res.json(newWait);
+  });
+
+
+
 app.get("/api/table", function (req, res) {
   return res.json(reservations);
 });
@@ -85,7 +109,7 @@ app.get("/api/waitlist", function (req, res) {
   return res.json(waitlist);
 });
 
-app.get("/api/clear", function(req, res) {
+app.post("/api/clear", function(req, res) {
   return res.json(clear)
 })
 

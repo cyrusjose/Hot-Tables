@@ -148,12 +148,14 @@
       customerID: $("#reserve-unique-id").val().trim(),
     };
 
+    
+
     // console.log(newReservation);
 
     $.post("/api/reserve", newReservation, function (data) {
       
       console.log(data)
-      // if(data.length > 5)
+      
       
       // Alert user of reservation
       if (data) {
