@@ -148,13 +148,21 @@
       customerID: $("#reserve-unique-id").val().trim(),
     };
 
-    console.log(newReservation);
+    
+
+    // console.log(newReservation);
 
     $.post("/api/reserve", newReservation, function (data) {
+      
+      console.log(data)
+      
+      
       // Alert user of reservation
       if (data) {
         alert("Get ready for a spontaneous experience!");
       }
+
+      
 
       // Tell user they're on the waiting list
       else {
