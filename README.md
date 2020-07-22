@@ -1,16 +1,41 @@
-# HotRestaurant
+# Spontaneous Restaurant ![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)
 
-* Description: Basic app demonstrating Node and Express with jQuery. Overall purpose is to help schedule reservation requests. Restaurant has just 5 tables available. First five requests get a reservation, every request after that is sent to the waiting list.
-* Live Demo: <https://hot-restaurant-fsf.herokuapp.com/>
+## Description
 
-![Hot Restaurant Image](Images/HotRestaurant.png)
+This is a restaurant app that uses Node and Express with jQuery to schedule reservations and maintain a wait list.
 
-## Notes
+![Home page](assets/spontaneous-restaurant.png)
 
-* You will NOT need a MySQL Database for this exercise.
-* Current app doesn't have admin handling. We'll deal with that at a later time.
-* Don't separate the JavaScript from the HTML in the client-side code. (i.e. Don't use external JavaScript. If you do, you will need an additional line of code to configure the express server to know where the JavaScript is).
+## Table of Contents
 
-## Good luck! Don't stress out
+-
 
-* Spend some time trying to build exposure. But don't get overwhelmed. We'll have plenty of time to come back to this.
+- [Usage](#usage)
+- [License](#license)
+- [Contributors](#contributors)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Usage
+
+The model for this website app could be used by restaurants to keep their reservations and waitlist organized.
+
+## License
+
+MIT License
+
+The MIT License is a permissive license with only very limited restriction on reuse and has good compatibility because it can be re-licensed under other licenses
+
+## Contributors
+
+This project was created by Cyrus Jose, Melinda Winter, Kate An, Kevin Cabe, and Joshuah Montero.
+
+## Questions
+
+You can find the contributors on GitHub:
+
+- [Cyrus Jose](https://github.com/cyrusjose)
+- [Melinda Winter](https://github.com/melindawinter)
+- [Kate An](https://github.com/katean004)
+- [Joshuah Montero](https://github.com/Joshemon)
+- [Kevin Cabe](https://github.com/softwaresCabe)
