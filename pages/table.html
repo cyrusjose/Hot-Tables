@@ -121,7 +121,7 @@
   <script type="text/javascript">
     function runTableQuery() {
       // The AJAX function uses the URL of our API to GET the data associated with it
-      $.ajax({ url: "/api/table", method: "GET" }).then(function (tableData) {
+      $.ajax({ url: "/api/table#", method: "GET" }).then(function (tableData) {
         // Here we then log the tableData to console, where it will show up as an object.
         console.log(tableData);
         console.log("------------------------------------");
